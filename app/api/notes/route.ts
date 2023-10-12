@@ -4,6 +4,9 @@ import { NextResponse, NextRequest } from "next/server";
 
 import { getAuth } from "@clerk/nextjs/server";
 
+export const dynamic = "force-dynamic";
+
+
 export async function GET(req: NextRequest, res: NextResponse) {
   try {
     const { userId } = getAuth(req);
